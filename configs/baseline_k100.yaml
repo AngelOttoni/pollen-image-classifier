@@ -1,0 +1,18 @@
+run_id: 'baseline_k100'
+seed: 42
+root: 'data/raw'
+split_train: 'train'
+split_test: 'test'
+classes: ['abacate','aroeira','eucalipto']
+descriptor:
+  type: 'sift'
+  dense: false
+  dense_step: 8
+kmeans:
+  K: 100
+  method: 'MiniBatchKMeans'
+  sample_descriptors: 100000
+classifier:
+  type: 'linear_svc'
+  C: 1.0
+out_dir: 'results/baseline_k100'
