@@ -19,4 +19,5 @@ kmeans_model: 'results/baseline_k100/kmeans_K100_baseline_k100.joblib'
 classifier:
   type: 'linear_svc'
   C: 1.0
+clf_model: 'results/baseline_k100/clf_linear_baseline_k100.joblib'
 out_dir: 'results/baseline_k100'
