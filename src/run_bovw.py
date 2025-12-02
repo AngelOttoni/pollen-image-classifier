@@ -6,11 +6,11 @@ import os
 import yaml
 import joblib
 from pathlib import Path
-from features.sift_features import SIFTExtractor
-from clustering.build_vocab import build_kmeans
-from models.train_clf import train_classifier
-from models.evaluate import evaluate_and_save
-from utils.io import gather_paths, make_run_id, unique_path, save_yaml
+from .features.sift_features import SIFTExtractor
+from .clustering.build_vocab import build_kmeans
+from .models.train_clf import descriptors_to_bovw_static, train_and_save
+from .models.evaluate import evaluate_and_save
+from .utils.io import gather_paths, make_run_id, unique_path, save_yaml
 import numpy as np
 
 def _ensure_out_dir(cfg):
@@ -57,10 +57,10 @@ def train_clf(cfg):
     X_train = []
     for p in train_paths:
         des = extractor.extract_from_path(p)
-        h = train_classifier.descriptors_to_bovw_static(des, kmeans, K)
+        h = descriptors_to_bovw_static(des, kmeans, K)
         X_train.append(h)
     X_train = np.vstack(X_train)
-    clf_path = train_classifier.train_and_save(X_train, y_train, cfg)
+    clf_path = train_and_save(X_train, y_train, cfg)
     return clf_path
 
 def evaluate_run(cfg):

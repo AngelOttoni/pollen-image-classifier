@@ -5,7 +5,7 @@ Retorna o path do modelo salvo.
 import os
 import joblib
 from sklearn.cluster import MiniBatchKMeans, KMeans
-from utils.io import unique_path, make_run_id
+from ..utils.io import unique_path, make_run_id
 
 def build_kmeans(descriptors, cfg):
     k_cfg = cfg.get('kmeans', {})

@@ -9,7 +9,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-from utils.io import unique_path
+from ..utils.io import unique_path
 import csv
 import shutil
 

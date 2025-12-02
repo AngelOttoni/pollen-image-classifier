@@ -7,7 +7,7 @@ Uso:
 '''
 import argparse
 import yaml
-from run_bovw import run_all, build_vocab, train_clf, evaluate_run
+from .run_bovw import run_all, build_vocab, train_clf, evaluate_run
 
 def load_config(path):
     with open(path, 'r') as f:

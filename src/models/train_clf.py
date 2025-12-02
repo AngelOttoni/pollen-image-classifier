@@ -6,7 +6,7 @@ import os
 import joblib
 import numpy as np
 from sklearn.svm import LinearSVC
-from utils.io import unique_path, make_run_id
+from ..utils.io import unique_path, make_run_id
 
 def descriptors_to_bovw_static(des, kmeans, K):
     if des is None or des.shape[0] == 0:
