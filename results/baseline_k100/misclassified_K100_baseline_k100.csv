@@ -1,0 +1,3 @@
+index,filepath,true_label,pred_label
+31,data/split_80_20/test/aroeira/Project_AL1_50.jpg,aroeira,abacate
+58,data/split_80_20/test/eucalipto/eucalipto_L1_Image094.jpg,eucalipto,abacate

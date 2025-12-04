@@ -1,6 +1,7 @@
 data/
-results/
-
+results/baseline_k100/misclassified_K100_baseline_k100
+data.zip
+results.zip
 
 
 # Byte-compiled / optimized / DLL files

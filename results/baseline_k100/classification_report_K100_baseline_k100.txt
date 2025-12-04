@@ -1,0 +1,18 @@
+RUN_ID: baseline_k100
+accuracy: 0.966667
+
+confusion_matrix:
+[[20  0  0]
+ [ 1 19  0]
+ [ 1  0 19]]
+
+classification_report:
+              precision    recall  f1-score   support
+
+     abacate     0.9091    1.0000    0.9524        20
+     aroeira     1.0000    0.9500    0.9744        20
+   eucalipto     1.0000    0.9500    0.9744        20
+
+    accuracy                         0.9667        60
+   macro avg     0.9697    0.9667    0.9670        60
+weighted avg     0.9697    0.9667    0.9670        60
